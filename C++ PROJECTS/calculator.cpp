@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    while (true)
+    {
+        cout << "enter the number: ";
+        float a; 
+        cin>>a;
+        cout <<"enter the 2nd number: ";
+        float b;
+        cin>>b;
+        cout<<"what do you want to do??"<<endl;
+        cout<<"1. sum"<<endl<<"2. sub"<<endl<<"3. mul"<<endl<<"4. div"<<endl;
+        while (true)
+        {
+            cout<<"enter your choice (1-4): ";
+            int choice;
+            cin>>choice;
+
+            if(choice == 1)
+            {
+                cout<<"the sum is: "<<a+b;
+            }
+            else if (choice == 2)
+            {
+                cout<<"the difference is: "<<a-b;
+            }
+            else if (choice == 3)
+            {
+                cout<<"THE PRODUCT IS: "<<a*b;
+            }
+            else if (choice == 4)
+            {
+                if(b != 0)
+                {
+                    cout<<"the quotient is: "<<a/b;
+                }
+                else 
+                {
+                    cout <<"division error by zero";
+                }
+            }
+            else
+            { 
+                cout<<"invalid operation";
+            }
+            cout<<endl<<"do you perform another opertion? (y/n): ";
+            char c;
+            cin>>c;
+            if(c == 'n' || c == 'N')
+            {
+                break;
+            }
+
+        }
+        cout<<endl;
+    }
+    return 0;
+}
